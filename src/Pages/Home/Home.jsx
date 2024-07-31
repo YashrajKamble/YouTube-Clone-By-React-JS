@@ -1,10 +1,12 @@
-import React from 'react'
-import './Home.css'
+import "./Home.css";
+import Sidebar from "../../Components/Sidebar/Sidebar";
 
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <Sidebar />
+    </>
+  );
 }
 
-export default Home
+export default Home;
