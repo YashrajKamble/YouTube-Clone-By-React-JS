@@ -1,10 +1,10 @@
 import "./Home.css";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 
-function Home() {
+function Home({ sidebar }) {
   return (
     <>
-      <Sidebar />
+      <Sidebar sidebar={sidebar} />
     </>
   );
 }
