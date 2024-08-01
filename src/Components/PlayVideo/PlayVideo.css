@@ -1,5 +1,6 @@
 .play-video {
-  flex-basis: 60%;
+  flex-basis: 69%;
+  /* flex-basis: 60%; */
 }
 
 .play-video video {
