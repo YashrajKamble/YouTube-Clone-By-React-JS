@@ -1,4 +1,3 @@
-import React from 'react'
 import './Feed.css'
 import thumbnail1 from '../../assets/thumbnail1.png'
 import thumbnail2 from '../../assets/thumbnail2.png'
@@ -69,6 +68,7 @@ const Feed = () => {
         <h3>GreatStack</h3>
         <p>15k views &bull; 2 days ago</p>
       </div>
+
       <div className='card'>
         <img src={thumbnail1} alt="" />
         <h2>Best channel to learn coding that help you to be a web developer</h2>
