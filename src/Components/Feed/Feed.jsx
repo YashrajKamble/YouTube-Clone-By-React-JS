@@ -1,5 +1,5 @@
 import './Feed.css'
-import thumbnail1 from '../../assets/thumbnail1.png'
+// import thumbnail1 from '../../assets/thumbnail1.png'
 // import thumbnail2 from '../../assets/thumbnail2.png'
 // import thumbnail3 from '../../assets/thumbnail3.png'
 // import thumbnail4 from '../../assets/thumbnail4.png'
@@ -10,6 +10,8 @@ import thumbnail1 from '../../assets/thumbnail1.png'
 import { Link } from 'react-router-dom'
 import { API_KEY } from '../../data'
 import { useEffect, useState } from 'react'
+import { value_converter } from '../../data'
+import moment from 'moment'
 
 
 const Feed = ({ category }) => {
@@ -31,9 +33,9 @@ const Feed = ({ category }) => {
         return (
           <Link to={`video/${item.snippet.categoryID}/${item.id}`} className='card' key={index}>
             <img src={item.snippet.thumbnails.medium.url} alt="" />
-            <h2>Best channel to learn coding that help you to be a web developer</h2>
-            <h3>GreatStack</h3>
-            <p>15k views &bull; 2 days ago</p>
+            <h2>{item.snippet.title}</h2>
+            <h3>{item.snippet.channelTitle}</h3>
+            <p>{value_converter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
           </Link>
         );
       })}
