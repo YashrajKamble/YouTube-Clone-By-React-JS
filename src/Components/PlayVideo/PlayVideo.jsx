@@ -57,13 +57,13 @@ const PlayVideo = () => {
             <h3>{apiData ? apiData.snippet.title : 'title here'} </h3>
             <div className='play-video-info'>
                 <p>
-                    {apiData ? value_converter(apiData.statistics.viewCount) : "16K"} views &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : "Unknown"}
+                    {apiData ? value_converter(apiData.statistics.viewCount) : "16K"} Views &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : "Unknown"}
                 </p>
                 <div >
                     <span><img src={like} alt="like" />{apiData ? value_converter(apiData.statistics.likeCount) : 171}</span>
                     <span><img src={dislike} alt="dislike" /></span>
-                    <span><img src={share} alt="share" />share</span>
-                    <span><img src={save} alt="save" />save</span>
+                    <span><img src={share} alt="share" />Share</span>
+                    <span><img src={save} alt="save" />Save</span>
                 </div>
             </div>
 
