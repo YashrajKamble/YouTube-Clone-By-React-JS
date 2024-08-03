@@ -71,7 +71,7 @@ const Sidebar = ({ sidebar, category, setCategory }) => {
 
         <div className="side-links" >
           <img src={jack} alt="" />
-          <p>PedDiePie</p>
+          <p>PewDiePie</p>
         </div>
 
         <div className="side-links" >

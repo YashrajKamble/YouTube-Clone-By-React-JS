@@ -17,6 +17,7 @@ const Feed = ({ category }) => {
 
   useEffect(() => {
     fetchData()
+    window.scrollTo(0, 0);
   }, [category])
 
   return (
