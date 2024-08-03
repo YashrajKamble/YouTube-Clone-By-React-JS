@@ -48,7 +48,7 @@ const PlayVideo = () => {
     return (
         <div className='play-video'>
             <iframe
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=0&mute=1`}
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0`}
                 frameBorder="0"
                 allow="accelerometer; autoplay;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"

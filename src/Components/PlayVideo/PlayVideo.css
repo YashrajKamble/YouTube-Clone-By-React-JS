@@ -1,6 +1,8 @@
 .play-video {
   flex-basis: 69%;
   /* flex-basis: 60%; */
+  /* padding: 0 50px; */
+  /* background-color: aqua; */
 }
 
 .play-video iframe {
