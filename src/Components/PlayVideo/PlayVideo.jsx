@@ -98,6 +98,7 @@ const PlayVideo = () => {
                                         <img src={like} alt=" " />
                                         <span>{value_converter(item.snippet.topLevelComment.snippet.likeCount)}</span>
                                         <img src={dislike} alt="" />
+                                        <p>Reply</p>
                                     </div>
                                 </div>
                             </div>
