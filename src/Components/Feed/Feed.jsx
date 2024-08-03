@@ -31,12 +31,14 @@ const Feed = ({ category }) => {
                 ? item.snippet.title
                 : item.snippet.title.slice(0, 60) + '...'}
             </h2>
+
             {/* <h3>{item.snippet.channelTitle}</h3> */}
             <h3>
               {item.snippet.channelTitle.length <= 25
                 ? item.snippet.channelTitle
                 : item.snippet.channelTitle.slice(0, 25) + '...'}
             </h3>
+
             <p>{value_converter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
           </Link>
         );

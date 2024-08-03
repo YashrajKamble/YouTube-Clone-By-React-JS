@@ -8,7 +8,6 @@ const Recommended = ({ categoryId }) => {
 
     const fetchData = async () => {
         const relatedVideo_url = ` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=45&regionCode=US&videoCategoryId=${categoryId}&key=${API_KEY}`;
-
         await fetch(relatedVideo_url)
             .then(res => res.json())
             .then(data => setApiData(data.items))
@@ -35,7 +34,7 @@ const Recommended = ({ categoryId }) => {
 
                     ))
                 ) : (
-                    <p>No data available</p> // Fallback if apiData is empty or undefined
+                    <p>No data available</p>
                 )}
             </>
 
