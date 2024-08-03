@@ -7,7 +7,7 @@ const Recommended = ({ categoryId }) => {
     const [apiData, setApiData] = useState([])
 
     const fetchData = async () => {
-        const relatedVideo_url = ` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=45&regionCode=US&videoCategoryId=${categoryId}&key=${API_KEY}`;
+        const relatedVideo_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=24&regionCode=US&videoCategoryId=0&key=${API_KEY}`;
         await fetch(relatedVideo_url)
             .then(res => res.json())
             .then(data => setApiData(data.items))
