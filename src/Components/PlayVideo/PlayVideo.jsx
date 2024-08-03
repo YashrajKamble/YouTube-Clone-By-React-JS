@@ -27,10 +27,6 @@ const PlayVideo = () => {
             .then(data => setApiData(data.items[0]));
     }
 
-    useEffect(() => {
-        fetchVideoData()
-    }, [videoId])
-
     const fetchOtherData = async () => {
         // Fetching channel data 
         const channelData_url = ` https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${apiData.snippet.channelId}&key=${API_KEY}`
@@ -40,6 +36,13 @@ const PlayVideo = () => {
         const comment_url = ` https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=${videoId}&key=${API_KEY}`
         await fetch(comment_url).then(res => res.json()).then(data => setCommentData(data.items))
     }
+
+    useEffect(() => {
+        fetchVideoData()
+        window.scrollTo(0, 0);
+        // window.location.reload();
+
+    }, [videoId])
 
     useEffect(() => {
         fetchOtherData()
