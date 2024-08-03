@@ -7,7 +7,7 @@ const Recommended = ({ categoryId }) => {
     const [apiData, setApiData] = useState([])
 
     const fetchData = async () => {
-        const relatedVideo_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=24&regionCode=US&videoCategoryId=0&key=${API_KEY}`;
+        const relatedVideo_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=26&regionCode=US&videoCategoryId=0&key=${API_KEY}`;
         await fetch(relatedVideo_url)
             .then(res => res.json())
             .then(data => setApiData(data.items))
@@ -25,7 +25,8 @@ const Recommended = ({ categoryId }) => {
                         <Link to={`/video/${item.snippet.categoryId}/${item.id}`} key={index} className="side-video-list">
                             <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
                             <div className="vid-info">
-                                <h4>{item.snippet.title}</h4>
+                                {/* <h4>{item.snippet.title}</h4> */}
+                                <h4>{item.snippet.title.length <= 45 ? item.snippet.title : item.snippet.title.slice(0, 45) + '...'}</h4>
                                 <p>{item.snippet.channelTitle}</p>
                                 <p>{value_converter(item.statistics.viewCount)} Views</p>
                             </div>
