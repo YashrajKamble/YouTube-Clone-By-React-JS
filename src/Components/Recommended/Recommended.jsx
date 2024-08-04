@@ -22,6 +22,7 @@ const Recommended = ({ categoryId }) => {
             <>
                 {apiData && Array.isArray(apiData) && apiData.length > 0 ? (
                     apiData.map((item, index) => (
+
                         <Link to={`/video/${item.snippet.categoryId}/${item.id}`} key={index} className="side-video-list">
                             <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
                             <div className="vid-info">
@@ -31,8 +32,6 @@ const Recommended = ({ categoryId }) => {
                                 <p>{value_converter(item.statistics.viewCount)} Views</p>
                             </div>
                         </Link>
-
-
                     ))
                 ) : (
                     <p>No data available</p>
