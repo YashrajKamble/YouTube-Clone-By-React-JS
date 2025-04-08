@@ -18,7 +18,7 @@
   flex-basis: 49%;
   font-weight: 900;
   padding-left: 10px;
-  padding: 5px 5px 5px 10px ;
+  padding: 5px 5px 5px 10px;
 }
 
 .vid-info h4 {
@@ -27,7 +27,7 @@
   color: black;
 }
 
-.vid-info p{
+.vid-info p {
   font-size: 12px;
   font-weight: 200;
 }

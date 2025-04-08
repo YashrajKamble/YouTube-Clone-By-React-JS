@@ -18,7 +18,7 @@ function Navbar({ setSidebar }) {
           className="menu-icon"
           alt=""
         />
-        <Link to='/'>
+        <Link to="/">
           <img src={logo} className="logo" alt="" />
         </Link>
       </div>
