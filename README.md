@@ -2,7 +2,7 @@
 
 A modern, responsive YouTube clone built with React.js that replicates the core functionality of the YouTube platform. This project demonstrates frontend development skills using modern web technologies and follows best practices in React development.
 
-![YouTube Clone Preview](https://you-tube-clone-by-react-js.vercel.app/)
+<!-- ![YouTube Clone Preview](https://you-tube-clone-by-react-js.vercel.app/) -->
 
 ## 🌟 Features
 
